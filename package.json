@@ -1,0 +1,25 @@
+{
+  "name": "lista-de-tareas-node",
+  "version": "1.0.0",
+  "description": "Projecto de Nodejs con ada school",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erickdavidhz7/node-server.git"
+  },
+  "keywords": [
+    "node",
+    "todolist",
+    "project"
+  ],
+  "author": "Erick Henriquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erickdavidhz7/node-server/issues"
+  },
+  "homepage": "https://github.com/erickdavidhz7/node-server#readme"
+}
