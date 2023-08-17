@@ -4,8 +4,8 @@ function displayMenu(){
     console.log("[1] Add a new Task");
     console.log("[2] Delete a Task");
     console.log("[3] Complete a Task");
-    console.log("[4] Print all Tasks\n");
-    console.log("----------------------------------------");
+    console.log("[4] Print all Tasks");
+    console.log("[5] Quit application\n");
 }
 
-displayMenu();
+module.exports = displayMenu;
