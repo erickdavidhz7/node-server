@@ -15,6 +15,9 @@ function addTask(taskList) {
   }
 
   taskList.push(newTask);
+  return new Promise((resolve) => {
+    resolve(taskList);
+  })
 }
 
 module.exports = addTask;

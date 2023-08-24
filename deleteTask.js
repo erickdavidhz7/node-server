@@ -7,10 +7,15 @@ function deleteTask(taskList){
             const index = taskList.indexOf(idInput);
             taskList.splice(index, 1);
             console.log(`The task of id: ${idInput}\nWas deleted from the list.`);
-            return;
+            return new Promise((resolve) => {
+                resolve(taskList);
+              })
         }
     }
     console.log("The id that you have entered was not found");
+    return new Promise((reject) => {
+        reject("The id that you have entered was not found");
+      })
 }
 
 module.exports = deleteTask;

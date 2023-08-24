@@ -8,10 +8,15 @@ function completeTask(taskList) {
       console.log(
         `The task of id: ${idInput}\nHas been assigned as completed.`
       );
-      return;
+      return new Promise((resolve) => {
+        resolve(taskList);
+      })
     }
   }
   console.log("The id that you have entered was not found");
+  return new Promise((reject) => {
+    reject("The id that you have entered was not found");
+  })
 }
 
 module.exports = completeTask;
