@@ -13,7 +13,6 @@ async function main() {
     displayMenu();
     userInput = readlineSync.question("Enter a menu selection: ");
     console.log("----------------------------------------");
-    console.log(taskList);
     switch (userInput) {
       case "1":
         taskList = await addTask(taskList);
@@ -28,7 +27,7 @@ async function main() {
         break;
 
       case "4":
-        taskList = displayTasks(taskList);
+        displayTasks(taskList);
         break;
 
       case "5":

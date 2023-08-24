@@ -10,14 +10,14 @@ function completeTask(taskList) {
       );
       return new Promise((resolve) => {
         console.log("Loading...");
-        setTimeout(()=> resolve(taskList), 2000)
+        setTimeout(()=> resolve(taskList), 1000)
       })
     }
   }
   console.log("The id that you have entered was not found");
   return new Promise((resolve) => {
     console.log("Loading...");
-    setTimeout(()=> resolve(taskList), 2000)
+    setTimeout(()=> resolve(taskList), 1000)
   })
 }
 

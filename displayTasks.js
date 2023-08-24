@@ -6,7 +6,7 @@ function displayTasks(taskList) {
     console.log(`Name: ${task.name}`);
     console.log(`Description: ${task.description}`);
     console.log(`Status: ${task.status}`);
-    console.log("");
+    if (taskList.indexOf(task) !== taskList.length - 1) console.log("----------------------------------------");
   });
 }
 
