@@ -1,7 +1,7 @@
 const readlineSync = require("readline-sync");
 
 function completeTask(taskList){
-    let idInput = parseInt(readlineSync.question("Please enter the id of the task that you would like delete: "), 10);
+    let idInput = parseInt(readlineSync.question("Please enter the id of the task that you would like complete: "), 10);
     for (const task of taskList) {
         if (task.id === idInput){
             task.status = "Completed"
