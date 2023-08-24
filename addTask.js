@@ -14,9 +14,10 @@ function addTask(taskList) {
     status : "Not completed"
   }
 
-  taskList.push(newTask);
+  taskList = [...taskList, newTask];
   return new Promise((resolve) => {
-    resolve(taskList);
+    console.log("Loading...");
+    setTimeout(()=> resolve(taskList), 2000)
   })
 }
 

@@ -5,37 +5,41 @@ const deleteTask = require("./deleteTask");
 const completeTask = require("./completeTask");
 const displayTasks = require("./displayTasks");
 
-const taskList = [];
-let userInput = "";
+async function main() {
+  let taskList = [];
+  let userInput = "";
 
-while (userInput != "5") {
-  displayMenu();
-  userInput = readlineSync.question("Enter a menu selection: ");
-  console.log("----------------------------------------");
+  while (userInput != "5") {
+    displayMenu();
+    userInput = readlineSync.question("Enter a menu selection: ");
+    console.log("----------------------------------------");
+    console.log(taskList);
+    switch (userInput) {
+      case "1":
+        taskList = await addTask(taskList);
+        break;
 
-  switch (userInput) {
-    case "1":
-      addTask(taskList);
-      break;
+      case "2":
+        taskList = await deleteTask(taskList);
+        break;
 
-    case "2":
-      deleteTask(taskList);
-      break;
+      case "3":
+        taskList = await completeTask(taskList);
+        break;
 
-    case "3":
-      completeTask(taskList);
-      break;
-      
-    case "4":
-      displayTasks(taskList);
-      break;
+      case "4":
+        taskList = displayTasks(taskList);
+        break;
 
-    case "5":
-      break;
-      
-    default:
-      console.log("Invalid Input");
-      console.log("Please Enter a valid input");
+      case "5":
+        break;
+
+      default:
+        console.log("Invalid Input");
+        console.log("Please Enter a valid input");
+    }
   }
+  console.log("Thanks for using the program!");
 }
-console.log("Thanks for using the program!");
+
+main();
