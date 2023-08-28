@@ -27,7 +27,7 @@ async function main() {
         break;
 
       case "4":
-        displayTasks(taskList);
+        await displayTasks(taskList);
         break;
 
       case "5":

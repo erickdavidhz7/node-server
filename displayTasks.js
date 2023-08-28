@@ -8,6 +8,10 @@ function displayTasks(taskList) {
     console.log(`Status: ${task.status}`);
     if (taskList.indexOf(task) !== taskList.length - 1) console.log("----------------------------------------");
   });
+  return new Promise((resolve) => {
+    console.log("\nLoading...");
+    setTimeout(() => resolve(), 1000);
+  });
 }
 
 module.exports = displayTasks;

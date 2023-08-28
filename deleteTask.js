@@ -9,14 +9,14 @@ function deleteTask(taskList) {
       console.log(`The task of id: ${idInput}\nWas deleted from the list.`);
       return new Promise((resolve) => {
         console.log("Loading...");
-        setTimeout(() => resolve(taskList), 1000);
+        setTimeout(() => resolve(taskList), 500);
       });
     }
   }
   console.log("The id that you have entered was not found");
   return new Promise((resolve) => {
     console.log("Loading...");
-    setTimeout(() => resolve(taskList), 1000);
+    setTimeout(() => resolve(taskList), 500);
   });
 }
 

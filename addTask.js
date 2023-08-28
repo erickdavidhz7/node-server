@@ -17,7 +17,7 @@ function addTask(taskList) {
   taskList = [...taskList, newTask];
   return new Promise((resolve) => {
     console.log("Loading...");
-    setTimeout(()=> resolve(taskList), 1000)
+    setTimeout(()=> resolve(taskList), 500)
   })
 }
 
