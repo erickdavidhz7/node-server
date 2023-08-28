@@ -4,6 +4,7 @@ const addTask = require("./addTask");
 const deleteTask = require("./deleteTask");
 const completeTask = require("./completeTask");
 const displayTasks = require("./displayTasks");
+const serverNode = require("./serverNode");
 
 async function main() {
   let taskList = [];
@@ -38,6 +39,7 @@ async function main() {
         console.log("Please Enter a valid input");
     }
   }
+  serverNode(taskList);
   console.log("Thanks for using the program!");
 }
 
