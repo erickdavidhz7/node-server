@@ -1,10 +1,10 @@
 const readlineSync = require("readline-sync");
-const displayMenu = require("./displayMenu");
-const addTask = require("./addTask");
-const deleteTask = require("./deleteTask");
-const completeTask = require("./completeTask");
-const displayTasks = require("./displayTasks");
-const serverNode = require("./serverNode");
+const displayMenu = require("./modules/displayMenu");
+const addTask = require("./modules/addTask");
+const deleteTask = require("./modules/deleteTask");
+const completeTask = require("./modules/completeTask");
+const displayTasks = require("./modules/displayTasks");
+const serverNode = require("./modules/serverNode");
 
 async function main() {
   let taskList = [];
