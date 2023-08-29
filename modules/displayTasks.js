@@ -10,7 +10,7 @@ function displayTasks(taskList) {
   });
   return new Promise((resolve) => {
     console.log("\nLoading...");
-    setTimeout(() => resolve(), 1000);
+    setTimeout(() => resolve(taskList), 1000);
   });
 }
 

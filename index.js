@@ -1,10 +1,7 @@
 const readlineSync = require("readline-sync");
 const displayMenu = require("./modules/displayMenu");
-const addTask = require("./modules/addTask");
-const deleteTask = require("./modules/deleteTask");
-const completeTask = require("./modules/completeTask");
-const displayTasks = require("./modules/displayTasks");
 const serverNode = require("./modules/serverNode");
+const taskFunctions = require("./modules/taskFunctions")
 
 async function main() {
   let taskList = [];
@@ -14,30 +11,7 @@ async function main() {
     displayMenu();
     userInput = readlineSync.question("Enter a menu selection: ");
     console.log("----------------------------------------");
-    switch (userInput) {
-      case "1":
-        taskList = await addTask(taskList);
-        break;
-
-      case "2":
-        taskList = await deleteTask(taskList);
-        break;
-
-      case "3":
-        taskList = await completeTask(taskList);
-        break;
-
-      case "4":
-        await displayTasks(taskList);
-        break;
-
-      case "5":
-        break;
-
-      default:
-        console.log("Invalid Input");
-        console.log("Please Enter a valid input");
-    }
+    taskList = await taskFunctions(userInput, taskList);
   }
   serverNode(taskList);
   console.log("Thanks for using the program!");
