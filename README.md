@@ -8,5 +8,5 @@ Se utilizó con una promesa que esta al ser satisfactoria se va a poder recibir 
 
 ¿Qué diferencias encontraste entre async, await y el método then()?
 
-Que utilizar async y await podemos parar la función hatsa que la promesa se resuelva, 
-con el método then() el resto la función continuaria y javascript no ejecutaria el then() callback hasta que la promesa se resuelva
+Que utilizar async y await podemos parar la función hasta que la promesa se resuelva, 
+con el método then() el resto la función continuaria y javascript no ejecutaria el then() callback hasta que la promesa se resuelva.
