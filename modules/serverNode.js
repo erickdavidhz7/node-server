@@ -1,21 +1,19 @@
-const http = require("http");
+const express = require("express");
+const app = express();
 const port = 8000;
+app.use(express.json());
 
 function serverNode(taskList) {
-  const server = http.createServer((req, res) => {
-    const url = req.url;
-    if (url === "/task_list" && req.method === "GET"){
-      res.writeHead(200, { "Content-Type": "application/json" });
-      res.end(JSON.stringify(taskList));
-    }else{
-      res.writeHead(404, { "Content-Type": "text/plain" });
-      res.end("Not Found");
-    }
+  app.get("/", (req, res) => {
+    res.status(200).send("Welcome!")
+  })
+  app.get("/task_list", (req,res) => {
+    res.status(200).send({ taskList : taskList});
   })
   
-  server.listen(port, () => {
+  app.listen(port , () => {
     console.log(`Listening on port ${port}`);
-  });
+  })
 }
 
 
